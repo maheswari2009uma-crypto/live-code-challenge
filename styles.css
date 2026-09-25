@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+  color: #202027;
+  font-family: Arial, sans-serif;
+}
+
+.page {
+  display: grid;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.cta {
+  background: #fbefe4;
+}
+
+.cta h2 {
+  font-size: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: #ffd264;
+  color: #202027;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hero,
+.growth {
+  background: #7048d8;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+.hero h1 span {
+  color: #ffd264;
+}
+
+.stars {
+  color: #ffd264;
+  font-size: 22px;
+}
+
+.categories {
+  background: #e3d7fa;
+}
+
+.category-list {
+  padding: 10px;
+  border-radius: 12px;
+  background: white;
+}
+
+.ideas {
+  background: #ffd264;
+}
+
+.idea-box {
+  padding: 12px;
+  border-radius: 12px;
+  background: white;
+}
+
+.brands,
+.reviews {
+  background: white;
+}
+
+.brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brand-list span {
+  padding: 10px;
+  border-radius: 20px;
+  background: #f5f0fc;
+}
+
+.weekly {
+  background: #ffd264;
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 8px;
+  border-radius: 10px;
+  background: white;
+  font-size: 12px;
+}
+
+.faces {
+  font-size: 30px;
+}
+
+.product-pictures {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 40px;
+}
+
+@media (min-width: 800px) {
+  body {
+    padding: 40px;
+  }
+
+  .page {
+    min-height: 740px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1.3fr 1fr 1fr;
+    grid-template-areas:
+      "cta hero hero categories"
+      "ideas brands weekly categories"
+      "ideas reviews growth growth";
+  }
+
+  .cta {
+    grid-area: cta;
+  }
+
+  .hero {
+    grid-area: hero;
+  }
+
+  .categories {
+    grid-area: categories;
+  }
+
+  .ideas {
+    grid-area: ideas;
+  }
+
+  .brands {
+    grid-area: brands;
+  }
+
+  .weekly {
+    grid-area: weekly;
+  }
+
+  .reviews {
+    grid-area: reviews;
+  }
+
+  .growth {
+    grid-area: growth;
+  }
+}
